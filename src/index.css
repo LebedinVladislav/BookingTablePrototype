@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background: var(--bs-tertiary-bg);
+  font-size: 0.875rem;
+}
+
+.app-shell,
+.page-wrap {
+  min-height: 100vh;
+}
+
+.content-wrap {
+  width: 100%;
+  max-width: 42.5rem;
+  margin-inline: auto;
+}
+
+.content-wrap-medium {
+  max-width: 47.5rem;
+}
+
+.content-wrap-wide {
+  max-width: 68.75rem;
+}
+
+.card {
+  --bs-card-border-color: var(--bs-border-color);
+}
+
+.card-body {
+  padding: 1.5rem;
+}
+
+.font-monospace,
+.section-caption {
+  font-family: 'JetBrains Mono', monospace !important;
+}
+
+.section-caption {
+  color: var(--bs-secondary-color);
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.detail-row {
+  display: grid;
+  grid-template-columns: minmax(7.5rem, 11.25rem) 1fr;
+  gap: 0.5rem;
+}
+
+.booking-stepper {
+  display: flex;
+  align-items: center;
+}
+
+.booking-step {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.booking-step:last-child {
+  flex: 0;
+}
+
+.booking-step-marker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.booking-step-number {
+  display: grid;
+  width: 1.75rem;
+  height: 1.75rem;
+  place-items: center;
+  border: 2px solid var(--bs-border-color);
+  border-radius: 50%;
+  background: var(--bs-body-bg);
+  color: var(--bs-secondary-color);
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.booking-step-label {
+  color: var(--bs-secondary-color);
+  font-size: 0.6875rem;
+  white-space: nowrap;
+}
+
+.booking-step-line {
+  flex: 1;
+  height: 2px;
+  margin: 0 0.5rem 1.125rem;
+  background: var(--bs-border-color);
+}
+
+.booking-step.is-active .booking-step-number {
+  border-color: var(--bs-primary);
+  background: var(--bs-primary);
+  color: var(--bs-white);
+}
+
+.booking-step.is-active .booking-step-label {
+  color: var(--bs-primary);
+}
+
+.booking-step.is-complete .booking-step-number,
+.booking-step.is-complete .booking-step-line {
+  border-color: var(--bs-success);
+  background: var(--bs-success);
+  color: var(--bs-white);
+}
+
+.time-input {
+  max-width: 9rem;
+}
+
+.admin-filters {
+  min-width: min(100%, 31.25rem);
+}
+
+.stat-card .card-body {
+  padding: 1rem;
+}
+
+.table-card > .card-body {
+  padding: 0;
+}
+
+.table th,
+.table td {
+  padding: 0.625rem 0.875rem;
+}
+
+.success-mark {
+  display: grid;
+  width: 4rem;
+  height: 4rem;
+  place-items: center;
+  border: 2px solid var(--bs-success);
+  border-radius: 50%;
+  background: var(--bs-success-bg-subtle);
+  color: var(--bs-success-text-emphasis);
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.success-page-preview {
+  filter: blur(2px);
+  pointer-events: none;
+}
+
+@media (max-width: 575.98px) {
+  .page-wrap {
+    padding-top: 2rem !important;
+  }
+
+  .card-body {
+    padding: 1rem;
+  }
+
+  .booking-step-label {
+    display: none;
+  }
+
+  .booking-step-line {
+    margin-bottom: 0;
+  }
+
+  .detail-row {
+    grid-template-columns: 1fr;
+    gap: 0.125rem;
+  }
+}
+
+.navbar-phone-number {
+  color: var(--bs-white);
+  text-decoration: none;
+}
+
+.form-control::placeholder {
+  opacity: 0.75;
+}
